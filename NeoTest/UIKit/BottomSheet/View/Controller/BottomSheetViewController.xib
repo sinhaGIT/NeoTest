@@ -23,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sWm-ja-Ybg">
-                    <rect key="frame" x="0.0" y="228.33333333333331" width="393" height="589.66666666666674"/>
+                    <rect key="frame" x="0.0" y="236.33333333333331" width="393" height="581.66666666666674"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                     <connections>
@@ -51,7 +51,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top 3 Characters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7Y-rb-Kg5">
-                    <rect key="frame" x="16" y="208.33333333333334" width="118" height="18"/>
+                    <rect key="frame" x="16" y="216.33333333333334" width="118" height="18"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" systemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
@@ -71,7 +71,7 @@
                 <constraint firstItem="A6B-Dy-IeB" firstAttribute="top" secondItem="bwH-Kb-gVg" secondAttribute="bottom" constant="34" id="V4u-rW-J1A"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HR9-bA-gwU" secondAttribute="trailing" constant="20" id="cUP-Wd-BZh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="A6B-Dy-IeB" secondAttribute="trailing" constant="20" id="f64-HU-lrN"/>
-                <constraint firstItem="m7Y-rb-Kg5" firstAttribute="top" secondItem="A6B-Dy-IeB" secondAttribute="bottom" constant="8" id="fd5-FL-6PV"/>
+                <constraint firstItem="m7Y-rb-Kg5" firstAttribute="top" secondItem="A6B-Dy-IeB" secondAttribute="bottom" constant="16" id="fd5-FL-6PV"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sWm-ja-Ybg" secondAttribute="trailing" id="fzE-ib-rjc"/>
                 <constraint firstItem="HR9-bA-gwU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="28" id="gAy-Rs-Xul"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="sWm-ja-Ybg" secondAttribute="bottom" id="hHF-4Z-0pd"/>
