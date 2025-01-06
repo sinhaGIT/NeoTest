@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -18,6 +19,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         if let windowScene = scene as? UIWindowScene {
             window = UIWindow(windowScene: windowScene)
+            
+            let rootView = CarMakersView()
+            
+            // Create a new UIWindow and set it up
+            window?.rootViewController = UIHostingController(rootView: rootView)
+            window?.makeKeyAndVisible()
         }
     }
 
