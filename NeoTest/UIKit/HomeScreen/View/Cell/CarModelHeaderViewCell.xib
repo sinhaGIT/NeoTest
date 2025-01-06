@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CarModelHeaderViewCell" rowHeight="193" id="KGk-i7-Jjw" customClass="CarModelHeaderViewCell" customModule="NeoTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="193"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="193"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="QkD-ak-CME">
+                        <rect key="frame" x="20" y="0.0" width="280" height="149"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="149" id="zZv-DW-yzx"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="H0X-Yg-468">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ZDJ-Vd-0pV">
+                        <rect key="frame" x="20" y="159" width="280" height="26"/>
+                        <color key="pageIndicatorTintColor" systemColor="systemGray2Color"/>
+                        <color key="currentPageIndicatorTintColor" name="AccentColor"/>
+                    </pageControl>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ZDJ-Vd-0pV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Des-7f-9m1"/>
+                    <constraint firstItem="ZDJ-Vd-0pV" firstAttribute="top" secondItem="QkD-ak-CME" secondAttribute="bottom" constant="10" id="DoP-yx-6D7"/>
+                    <constraint firstItem="QkD-ak-CME" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="HxG-Dz-yFG"/>
+                    <constraint firstItem="QkD-ak-CME" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Lmg-zZ-FbQ"/>
+                    <constraint firstAttribute="trailing" secondItem="QkD-ak-CME" secondAttribute="trailing" constant="20" id="Nnb-r9-t8d"/>
+                    <constraint firstAttribute="bottom" secondItem="ZDJ-Vd-0pV" secondAttribute="bottom" constant="8" id="ZQ7-99-zFt"/>
+                    <constraint firstAttribute="trailing" secondItem="ZDJ-Vd-0pV" secondAttribute="trailing" constant="20" id="yjd-TN-W1p"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="collectionView" destination="QkD-ak-CME" id="UI8-RN-H2B"/>
+                <outlet property="heightConstraint" destination="zZv-DW-yzx" id="nho-AF-twB"/>
+                <outlet property="pageControl" destination="ZDJ-Vd-0pV" id="B5i-J8-cGe"/>
+            </connections>
+            <point key="canvasLocation" x="19.847328244274809" y="72.183098591549296"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
