@@ -16,22 +16,23 @@ struct CarListRowView: View {
         HStack {
             Image(imageName)
                 .resizable()
-                .scaledToFit()
+                .aspectRatio(contentMode: .fill)
                 .frame(width: 52.0, height: 52.0)
                 .cornerRadius(8.0)
-                .padding()
+                .padding(.leading, 10)
             
             VStack(alignment: .leading, spacing: 4.0) {
                 Text(title)
-                    .font(.headline)
+                    .font(.system(size: 15, weight: .bold))
                     .lineLimit(1)
                     .foregroundColor(.primary)
                 
                 Text(subtitle)
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
-                    .lineLimit(2)
+                    .font(.system(size: 15, weight: .medium))
+                    .foregroundColor(Color(UIColor.darkGray))
+                    .lineLimit(1)
             }
+            .padding(.leading, 4)
             
             Spacer()
         }
@@ -42,5 +43,5 @@ struct CarListRowView: View {
 }
 
 #Preview {
-    CarListRowView(title: "Nexon", subtitle: "12.00", imageName: "Camry")
+    CarListRowView(title: "Nexon", subtitle: "12.00", imageName: "Nexon")
 }

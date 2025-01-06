@@ -25,10 +25,10 @@ struct CarMakersView: View {
                 // List Section
                 Section(header:
                             StickySearchBar(viewModel: self.viewModel)
-                    .frame(height: 44)
-                    .background(Color(red: 211/255, green: 211/255, blue: 211/255))
-                    .cornerRadius(12.0)
-                    .padding(.bottom, 20)
+                    .frame(height: 38)
+                    .background(Color(red: 167/255, green: 167/255, blue: 167/255))
+                    .cornerRadius(4.0)
+                    .padding(.bottom, 16)
                         
                 ) {
                     ForEach(viewModel.filterCarModels, id: \.id) { item in
@@ -63,8 +63,8 @@ struct CarMakersView: View {
                         Image(systemName: "ellipsis")
                             .font(.system(size: 24))
                             .foregroundColor(.white)
-                            .frame(width: 56, height: 56)
-                            .background(Color.accentColor)
+                            .frame(width: 50, height: 50)
+                            .background(Color(UIColor(red: 0, green: 117.0/255.0, blue: 227.0/255.0, alpha: 1.0)))
                             .clipShape(Circle())
                             .shadow(color: .gray.opacity(0.4), radius: 4, x: 0, y: 2)
                     }

@@ -18,7 +18,7 @@ struct CarMakerCrouselView: View {
                     VStack {
                         Rectangle()
                             .fill(Color.clear)
-                            .frame(height: 200)
+                            .frame(height: 180)
                             .overlay(
                                 Image(uiImage: UIImage(named: carMaker.imageUrl)!)
                                     .resizable()
@@ -34,7 +34,7 @@ struct CarMakerCrouselView: View {
             .onAppear {
                 viewModel.fetchCarMakers()
             }
-            .frame(height: 250)
+            .frame(height: 200)
             .background(Color.white)
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             .onChange(of: currentPage) { newPage in
@@ -46,11 +46,11 @@ struct CarMakerCrouselView: View {
                 ForEach(0..<viewModel.carMakers.count, id: \.self) { index in
                     Circle()
                         .fill(currentPage == index ? Color.blue : Color.gray) // Blue for active page, gray for others
-                        .frame(width: 8, height: 8)
-                        .padding(2)
+                        .frame(width: 7, height: 7)
+                        .padding(1)
                 }
             }
-            .padding(.top, 2)
+            .padding(.top, 0)
         }
     }
 }
