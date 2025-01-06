@@ -1,0 +1,200 @@
+[
+        {
+            "id": "1",
+            "brandName": "Tata",
+            "manufacturer": "Tata Motors Limited",
+            "imageUrl": "Tata",
+            "models": [
+                {
+                    "id": "1",
+                    "modelName": "Nexon",
+                    "imageUrl": "Nexon",
+                    "price": "11.80"
+                },
+                {
+                    "id": "2",
+                    "modelName": "Punch",
+                    "imageUrl": "Punch",
+                    "price": "6.13 "
+                },
+                {
+                    "id": "3",
+                    "modelName": "Altroz",
+                    "imageUrl": "Altroz",
+                    "price": "6.65"
+                },
+                {
+                    "id": "4",
+                    "modelName": "Harrier",
+                    "imageUrl": "Harrier",
+                    "price": "14.99"
+                },
+                {
+                    "id": "5",
+                    "modelName": "Safari",
+                    "imageUrl": "Safari",
+                    "price": "15.49 "
+                },
+                {
+                    "id": "6",
+                    "modelName": "Curvv",
+                    "imageUrl": "Curvv",
+                    "price": "18.00"
+                },
+                {
+                    "id": "7",
+                    "modelName": "Tiago",
+                    "imageUrl": "Tiago",
+                    "price": "5.65"
+                }
+                
+            ]
+        },
+        {
+            "id": "2",
+            "brandName": "Maruti Suzuki",
+            "manufacturer": "Maruti Suzuki India Limited (MSIL)",
+            "imageUrl": "Maruti Suzuki",
+            "models": [
+                {
+                    "id": "1",
+                    "modelName": "Fronx",
+                    "imageUrl": "Fronx",
+                    "price": "7.51"
+                },
+                {
+                    "id": "2",
+                    "modelName": "Swift",
+                    "imageUrl": "Swift",
+                    "price": "6.6.49 "
+                },
+                {
+                    "id": "3",
+                    "modelName": "Grand Vitara",
+                    "imageUrl": "Grand Vitara",
+                    "price": "6.65"
+                },
+                {
+                    "id": "4",
+                    "modelName": "Brezza",
+                    "imageUrl": "Brezza",
+                    "price": "8.34"
+                },
+                {
+                    "id": "5",
+                    "modelName": "Baleno",
+                    "imageUrl": "Baleno",
+                    "price": "6.66 "
+                },
+                {
+                    "id": "6",
+                    "modelName": "Ertiga",
+                    "imageUrl": "Ertiga",
+                    "price": "8.69"
+                },
+                {
+                    "id": "7",
+                    "modelName": "Jimny",
+                    "imageUrl": "Jimny",
+                    "price": "12.74"
+                },
+                {
+                    "id": "8",
+                    "modelName": "XL6",
+                    "imageUrl": "XL6",
+                    "price": "11.61"
+                }
+                
+            ]
+        },
+        {
+            "id": "3",
+            "brandName": "Mahindra",
+            "manufacturer": "Mahindra & Mahindra",
+            "imageUrl": "Mahindra",
+            "models": [
+                {
+                    "id": "1",
+                    "modelName": "XUV 300",
+                    "imageUrl": "XUV300",
+                    "price": "7.99"
+                },
+                {
+                    "id": "2",
+                    "modelName": "XUV 700",
+                    "imageUrl": "XUV700",
+                    "price": "13.99"
+                },
+                {
+                    "id": "3",
+                    "modelName": "Scorpio",
+                    "imageUrl": "Scorpio",
+                    "price": "13.62"
+                },
+                {
+                    "id": "4",
+                    "modelName": "Thar",
+                    "imageUrl": "Thar",
+                    "price": "14.10"
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "brandName": "Toyota",
+            "manufacturer": "Toyota Motor Corporation",
+            "imageUrl": "Toyota",
+            "models": [
+                {
+                    "id": "1",
+                    "modelName": "Corolla",
+                    "imageUrl": "Corrola",
+                    "price": "14.10"
+                },
+                {
+                    "id": "2",
+                    "modelName": "Camry",
+                    "imageUrl": "Camry",
+                    "price": "46.17"
+                },
+                {
+                    "id": "3",
+                    "modelName": "Innova",
+                    "imageUrl": "Innova",
+                    "price": "28.10"
+                },
+                {
+                    "id": "4",
+                    "modelName": "Urban Cruiser",
+                    "imageUrl": "Urban Cruiser",
+                    "price": "13.99"
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "brandName": "Honda",
+            "manufacturer": "Honda Motor Co., Ltd.",
+            "imageUrl": "Honda",
+            "models": [
+                {
+                    "id": "1",
+                    "modelName": "City",
+                    "imageUrl": "City",
+                    "price": "14.99"
+                },
+                {
+                    "id": "2",
+                    "modelName": "Amaze",
+                    "imageUrl": "Amaze",
+                    "price": "8.89"
+                },
+                {
+                    "id": "3",
+                    "modelName": "CR-V",
+                    "imageUrl": "CR-V",
+                    "price": "17.98"
+                }
+            ]
+        }
+    ]

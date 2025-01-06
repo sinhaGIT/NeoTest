@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Nexon.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
