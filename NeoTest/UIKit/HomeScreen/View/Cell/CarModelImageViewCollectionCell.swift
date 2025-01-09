@@ -9,7 +9,11 @@ import UIKit
 
 class CarModelImageViewCollectionCell: UICollectionViewCell {
     
+    //MARK: - OUTLETS
+    
     @IBOutlet weak var imgViewCarManuf: UIImageView!
+    
+    //MARK: - Cell Life Cycle
 
     override func awakeFromNib() {
         super.awakeFromNib()

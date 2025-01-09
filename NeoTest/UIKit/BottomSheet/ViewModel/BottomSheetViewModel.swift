@@ -4,6 +4,10 @@
 //
 //  Created by Bajrang Sinha on 29/12/24.
 //
+//  This view model is responsible for managing the data and business logic
+//  for the BottomSheetViewController. It provides the necessary data to the view,
+//  handles interactions, and ensures separation of concerns by keeping
+//  the view controller free from business logic.
 
 import Foundation
 

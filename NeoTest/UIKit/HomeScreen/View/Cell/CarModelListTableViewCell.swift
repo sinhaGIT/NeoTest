@@ -9,11 +9,15 @@ import UIKit
 
 class CarModelListTableViewCell: UITableViewCell {
     
+    //MARK: - OUTLETS
+    
     @IBOutlet weak var lblCarModelName: UILabel!
     @IBOutlet weak var lblCarModelPrice: UILabel!
     
     @IBOutlet weak var imgViewCarModel: UIImageView!
     @IBOutlet weak var viewContainer: UIView!
+    
+    //MARK: - Cell Life Cycle
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -39,6 +43,10 @@ class CarModelListTableViewCell: UITableViewCell {
         imgViewCarModel.image = nil
     }
     
+    /// Configure cell with model.
+    ///
+    /// - Parameter carModel: A  model for displaying data.
+    ///
     func setupCell(carModel: CarModel) {
         lblCarModelName.text = carModel.modelName
         lblCarModelPrice.text = carModel.price

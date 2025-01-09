@@ -19,6 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             window = UIWindow(windowScene: windowScene)
             
+            
+            // Setting root controller to window
             let builder = CarModelListViewControllerBuilder()
             let rootController = UINavigationController(rootViewController: builder.build())
             rootController.navigationBar.isHidden = true

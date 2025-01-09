@@ -19,7 +19,7 @@ extension UITableView {
     func registerCell<T: UITableViewCell>(ofType type: T.Type) {
         let cellName = String(describing: T.self)
         
-        if Bundle.main.path(forResource: cellName, ofType: "nib") != nil {
+        if Bundle.main.path(forResource: cellName, ofType: Constants.FileExtensionNames.nib) != nil {
             let nib = UINib(nibName: cellName, bundle: Bundle.main)
             register(nib, forCellReuseIdentifier: cellName)
         } else {
@@ -29,7 +29,7 @@ extension UITableView {
     
     func registerHeaderFooterView<T: UITableViewHeaderFooterView>(ofType type: T.Type) {
         let headerName = String(describing: T.self)
-        if Bundle.main.path(forResource: headerName, ofType: "nib") != nil {
+        if Bundle.main.path(forResource: headerName, ofType: Constants.FileExtensionNames.nib) != nil {
             let nib = UINib(nibName: headerName, bundle: Bundle.main)
             register(nib, forHeaderFooterViewReuseIdentifier: headerName)
         }
@@ -66,7 +66,7 @@ extension UICollectionView {
     func registerCell<T: UICollectionViewCell>(ofType type: T.Type) {
         let cellName = String(describing: T.self)
         
-        if Bundle.main.path(forResource: cellName, ofType: "nib") != nil {
+        if Bundle.main.path(forResource: cellName, ofType: Constants.FileExtensionNames.nib) != nil {
             let nib = UINib(nibName: cellName, bundle: Bundle.main)
             register(nib, forCellWithReuseIdentifier: cellName)
         } else {
