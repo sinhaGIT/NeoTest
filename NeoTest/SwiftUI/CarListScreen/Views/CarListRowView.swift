@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct CarListRowView: View {
-    let title: String
-    let subtitle: String
-    let imageName: String
+    /// An object of car sub-model used as the primary data source.
+    let carModel: CarSubModel
     
     var body: some View {
         HStack {
-            Image(imageName)
+            Image(carModel.imageUrl)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 52.0, height: 52.0)
@@ -22,12 +21,12 @@ struct CarListRowView: View {
                 .padding(.leading, 10)
             
             VStack(alignment: .leading, spacing: 4.0) {
-                Text(title)
+                Text(carModel.modelName)
                     .font(.system(size: 15, weight: .bold))
                     .lineLimit(1)
                     .foregroundColor(.primary)
                 
-                Text(subtitle)
+                Text(carModel.price)
                     .font(.system(size: 15, weight: .medium))
                     .foregroundColor(Color(UIColor.darkGray))
                     .lineLimit(1)
@@ -43,5 +42,5 @@ struct CarListRowView: View {
 }
 
 #Preview {
-    CarListRowView(title: "Nexon", subtitle: "12.00", imageName: "Nexon")
+    CarListRowView(carModel: CarSubModel(id: "\(UUID())", modelName: "Nexon", imageUrl: "Nexon", price: "12.00"))
 }

@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct BottomSheetView: View {
+    /// The view model that manages the state and behavior for the BottomSheet view.
+    /// Declared as `@StateObject` to ensure that this instance is owned and managed by the SwiftUI view.
+    /// This property handles data binding between the view and the logic, ensuring the view updates whenever
+    /// relevant properties in the `BottomSheetViewModel` change.
+    /// 
     @StateObject var viewModel: BottomSheetViewModel
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("List Statistics")
+            Text(Constants.NavigationTitles.listStatistics)
                 .font(.title)
                 .padding()
             
@@ -24,7 +29,7 @@ struct BottomSheetView: View {
                     .padding(.vertical, 4)
                 
                 if !$viewModel.top3CharacterCount.isEmpty {
-                    Text("Top 3 Characters:")
+                    Text("Top \(viewModel.top3CharacterCount.count) Characters:")
                         .padding(.vertical, 4)
                     List(viewModel.top3CharacterCount) { item in
                         HStack {
@@ -47,5 +52,5 @@ struct BottomSheetView: View {
 }
 
 #Preview {
-    BottomSheetView(viewModel: BottomSheetViewModel(carModels: [CarSubModel(id: "1", modelName: "Nano", imageUrl: "", price: "120.0")]))
+    BottomSheetView(viewModel: BottomSheetViewModel(carModels: [CarSubModel(id: "1", modelName: "Nexon", imageUrl: "Nexon", price: "12.0")]))
 }
