@@ -86,35 +86,3 @@ extension UICollectionView {
         return dequeueReusableCell(withReuseIdentifier: cellName, for: indexPath) as! T
     }
 }
-
-extension UITableView {
-    
-    func reloadRowsInSection(section: Int, oldCount:Int, newCount: Int){
-        
-        let maxCount = max(oldCount, newCount)
-        let minCount = min(oldCount, newCount)
-        
-        var changed = [IndexPath]()
-        
-        for i in minCount..<maxCount {
-            let indexPath = IndexPath(row: i, section: section)
-            changed.append(indexPath)
-        }
-        
-        var reload = [IndexPath]()
-        for i in 0..<minCount{
-            let indexPath = IndexPath(row: i, section: section)
-            reload.append(indexPath)
-        }
-        
-        beginUpdates()
-        if(newCount > oldCount){
-            insertRows(at: changed, with: .fade)
-        }else if(oldCount > newCount){
-            deleteRows(at: changed, with: .fade)
-        }
-        reloadRows(at: reload, with: .none)
-        endUpdates()
-        
-    }
-}

@@ -168,9 +168,10 @@ extension CarModelListViewController: SearchHeaderDelegate {
     ///
     func textDidChange(_ searchText: String) {
         guard let viewModel else { return }
-        let oldCount = viewModel.numberOfModelForBrand(at: selectedBrandIndex)
         viewModel.filter(by: searchText, for: selectedBrandIndex)
-        let newCount = viewModel.numberOfModelForBrand(at: selectedBrandIndex)
-        tblViewCarModels.reloadRowsInSection(section: 1, oldCount: oldCount, newCount: newCount)
+        tblViewCarModels.reloadSections([1], with: .automatic)
+        if let headerView = tblViewCarModels.headerView(forSection: 1) as? CarModelSearchHeaderView {
+            headerView.txtSearch.becomeFirstResponder()
+        }
     }
 }
