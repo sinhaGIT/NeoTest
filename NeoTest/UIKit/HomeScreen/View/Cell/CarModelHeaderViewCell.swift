@@ -48,6 +48,9 @@ class CarModelHeaderViewCell: UITableViewCell {
         let height = (180 / 353) * width
         
         heightConstraint.constant = height
+        collectionView.registerCell(ofType: CarModelImageViewCollectionCell.self)
+        collectionView.dataSource = self
+        collectionView.delegate = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -62,9 +65,6 @@ class CarModelHeaderViewCell: UITableViewCell {
     ///
     func configureCarBrands(withCellVM cellVM: CarBrandHeaderViewModel) {
         cellViewModel = cellVM
-        collectionView.registerCell(ofType: CarModelImageViewCollectionCell.self)
-        collectionView.dataSource = self
-        collectionView.delegate = self
         pageControl.numberOfPages = cellVM.numberOfCarBrands()
     }
 }
