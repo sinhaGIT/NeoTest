@@ -36,3 +36,41 @@ struct StickySearchBar: View {
         .background(Color.clear)
     }
 }
+
+struct SearchBarView: View {
+    @Binding var searchText: String
+    @State private var isEditing = false
+    
+    var body: some View {
+        HStack {
+            HStack {
+                HStack {
+                    Image(systemName: "magnifyingglass")
+                        .foregroundColor(.gray)
+                        .padding(.leading, 5)
+                    TextField(Constants.PlaceholderNames.search, text: $searchText)
+                        .padding(5)
+                        .onTapGesture {
+                            self.isEditing = true
+                        }
+                }
+                .background(.white)
+                .cornerRadius(10.0)
+                if isEditing {
+                    Button(action: {
+                        self.isEditing = false
+                        self.searchText = ""
+                        // Dismiss keyboard
+                        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                    }) {
+                        Text("cancel")
+                            .font(Font.system(size: 18, weight: .semibold))
+                            .foregroundColor(Color(red: 140/255, green: 161/255, blue: 173/255))
+                    }
+                    .padding(.trailing, 10)
+                }
+            }
+            .padding(10)
+        }
+    }
+}

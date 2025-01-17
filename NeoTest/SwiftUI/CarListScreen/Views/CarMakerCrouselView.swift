@@ -57,7 +57,7 @@ struct CarMakerCrouselView: View {
                         .padding(1)
                 }
             }
-            .padding(.top, 0)
+            .padding(.top, 4)
         }
     }
 }

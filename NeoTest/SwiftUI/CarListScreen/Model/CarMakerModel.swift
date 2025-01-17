@@ -31,17 +31,17 @@ struct CarMakerModel: Identifiable, Decodable {
 }
 
 /// A model representing a specific car sub-model.
-struct CarSubModel: Identifiable, Decodable {
+struct CarSubModel: Identifiable, Decodable, Equatable {
     
     /// The unique identifier for the car sub-model.
     let id: String
     
     /// The name of the car model (e.g., "Corolla", "X5").
-    let modelName: String
+    var modelName: String
     
     /// The URL for the car model's image.
-    let imageUrl: String
+    var imageUrl: String
     
     /// The price of the car model as a string (e.g., "$30,000").
-    let price: String
+    var price: String
 }

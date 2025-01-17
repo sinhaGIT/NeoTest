@@ -23,36 +23,40 @@ struct CarMakersView: View {
     
     var body: some View {
         ZStack {
-            List {
-                Section {
-                    // Carousel Section
-                    CarMakerCrouselView(carMakers: viewModel.carMakers) { newPage in
-                        viewModel.updateFilterCarModel(fromIndex: newPage)
-                    }
+            ScrollView {
+                LazyVStack(spacing: 8, pinnedViews: [.sectionHeaders]) {
+                    Section {
+                        // Carousel Section
+                        CarMakerCrouselView(carMakers: viewModel.carMakers) { newPage in
+                            viewModel.updateFilterCarModel(fromIndex: newPage)
+                        }
                         .listRowSeparator(.hidden)
-                }
-                .background(Color.white)
-                
-                // List Section
-                Section(header:
-                            StickySearchBar(searchText: $viewModel.searchText)
-                    .frame(height: 38)
-                    .background(Color(red: 167/255, green: 167/255, blue: 167/255))
-                    .cornerRadius(4.0)
-                    .padding(.bottom, 16)
-                        
-                ) {
-                    ForEach(viewModel.filterCarModels, id: \.id) { item in
-                        CarListRowView(carModel: item)
-                            .frame(height: 72.0)
-                            .listRowSeparator(.hidden)
-                            .background(Color(red: 204/255, green: 232/255, blue: 225/255))
-                            .cornerRadius(12.0)
-                            .padding(.vertical, -7)
+                        .padding(.bottom, 44)
+                    }
+                    .background(Color.white)
+                    
+                    // List Section
+                    Section(header:
+                                StickySearchBar(searchText: $viewModel.searchText)
+                        .frame(height: 38)
+                        .background(Color(red: 167/255, green: 167/255, blue: 167/255))
+                        .cornerRadius(4.0)
+                        .padding(.bottom, 18)
+                            
+                    ) {
+                        ForEach(viewModel.filterCarModels, id: \.id) { item in
+                            CarListRowView(carModel: item)
+                                .frame(height: 72.0)
+                                .listRowSeparator(.hidden)
+                                .background(Color(red: 204/255, green: 232/255, blue: 225/255))
+                                .cornerRadius(12.0)
+                        }
                     }
                 }
+                .padding(.horizontal, 20)
             }
-            .padding(.top, getStatusBarHeight())
+            .scrollDismissesKeyboard(.immediately)
+            .padding(.top, 2)
             .background(Color.white)
             .listStyle(.plain)
             .listRowSeparator(.hidden)
@@ -88,18 +92,6 @@ struct CarMakersView: View {
         }
     }
 }
-
-// Function to calculate status bar height excluding navigation bar
-    private func getStatusBarHeight() -> CGFloat {
-        if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
-            if let window = scene.delegate as? SceneDelegate {
-                let safeAreaTop = window.window?.safeAreaInsets.top ?? 0
-                let navigationBarHeight = UINavigationController().navigationBar.frame.height
-                return safeAreaTop - navigationBarHeight
-            }
-        }
-        return 20.0
-    }
 
 #Preview {
     CarMakersView()
